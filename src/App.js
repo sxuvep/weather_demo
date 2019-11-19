@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App2.css';
+import WeatherContainer from './components/WeatherContainer';
+import Title from './components/Title';
+import { Row, Col } from 'react-bootstrap';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="wrapper">
+			<div className="main">
+				<div className="container">
+					<Row>
+						<Col sm={5} className="title-container">
+							<Title />
+						</Col>
+						<Col sm={7} className="form-container">
+							<WeatherContainer />
+						</Col>
+					</Row>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;
